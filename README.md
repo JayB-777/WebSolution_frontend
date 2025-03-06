@@ -1,54 +1,35 @@
-# React + TypeScript + Vite
+# 🚀 Web Solution Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 🔗 **개요**
 
-Currently, two official plugins are available:
+이 프로젝트는 **Web Solution의 프론트엔드**로, 사용자 로그인, 회원가입, 회원가입 승인 기능을 포함합니다.  
+React + TypeScript + Vite 기반으로 개발되었으며, 백엔드(Spring Boot)와 통신하여 인증 기능을 제공합니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📌 **기능**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✔ **회원가입 & 로그인**  
+✔ **Spring Security 기반 인증**  
+✔ **JWT 기반 로그인 세션 유지**  
+✔ **관리자 회원가입 승인 시스템**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠 **기술 스택**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### **Frontend**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- ⚛️ **React (Vite 기반)**
+- 🔷 **TypeScript**
+- 🎨 **Styled Components / Tailwind CSS**
+- 📡 **React Router (페이지 이동)**
+- 🌐 **API 통신 (RESTful, Fetch API)**
+
+### **Backend (연동 예정)**
+
+- ☕ **Spring Boot**
+- 🔐 **Spring Security & JWT 인증**
+- 🗄 **MySQL (회원 정보 저장)**
+
+---
