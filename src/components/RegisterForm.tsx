@@ -74,6 +74,7 @@ function RegisterForm() {
           onChange={handleChange}
           required
         />
+        ※관리자 승인 후 로그인 가능합니다.
         <button type="submit" className="register-btn">
           회원가입
         </button>
