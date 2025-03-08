@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 function RegisterForm() {
   const [formData, setFormData] = useState({
-    username: "",
+    loginId: "",
     password: "",
     company: "",
-    name: "",
-    phone: "",
+    userName: "",
+    phoneNumber: "",
     email: "",
   });
 
@@ -38,7 +38,7 @@ function RegisterForm() {
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>
         <input
-          name="username"
+          name="loginId"
           placeholder="아이디"
           onChange={handleChange}
           required
@@ -57,13 +57,13 @@ function RegisterForm() {
           required
         />
         <input
-          name="name"
+          name="userName"
           placeholder="이름"
           onChange={handleChange}
           required
         />
         <input
-          name="phone"
+          name="phoneNumber"
           placeholder="휴대전화"
           onChange={handleChange}
           required
