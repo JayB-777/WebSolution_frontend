@@ -25,11 +25,12 @@ function RegisterForm() {
       body: JSON.stringify(formData),
     });
 
-    if (response.ok) {
+    const data = await response.json();
+    if (response.ok && data.isSuccess) {
       alert("회원가입 요청 완료 (관리자 승인 필요)");
       navigate("/main"); // 회원가입 후 로그인 페이지로 이동
     } else {
-      alert("회원가입 실패");
+      alert(data.message);
     }
   };
 
