@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
-  const [formData, setFormData] = useState({ username: "", password: "" });
+  const [formData, setFormData] = useState({ loginId: "", password: "" });
   const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,12 +17,13 @@ function LoginForm() {
       body: JSON.stringify(formData),
     });
 
-    if (response.ok) {
-      const data = await response.json();
+    const data = await response.json();
+
+    if (response.ok && data.isSuccess) {
       localStorage.setItem("token", data.token);
       alert("로그인 성공!");
     } else {
-      alert("로그인 실패");
+      alert(data.message);
     }
   };
 
@@ -31,7 +32,7 @@ function LoginForm() {
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <input
-          name="username"
+          name="loginId"
           placeholder="아이디"
           onChange={handleChange}
           required
