@@ -71,3 +71,11 @@ button {
   color: #721c24;
   margin-top: 10px;
 }
+
+.error-message {
+  color: red;
+  font-size: 13px;
+  margin: -6px 0 8px 0;
+  text-align: left;
+  width: 100%;
+}
